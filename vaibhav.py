@@ -10,10 +10,10 @@ from threading import Timer
 import pytz
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7096776853:AAHs9-8tQtR8PGxsBoCIftwh3vFvmq078Jo')
+bot = telebot.TeleBot('7398908391:AAGP2fY5nJ8uKBCA5dP7ZBf89p_9h2_tyL0')
 
 # Admin user IDs
-admin_id = ["2136214036","7120862971"]
+admin_id = ["2136214036","5853607378"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -137,12 +137,12 @@ def show_all_users(message):
         except FileNotFoundError:
             response = "No data found"
     else:
-        response = "Only @BOOMBAMCHEAT3344 Can Run This Command."
+        response = "Only @BOOMBAMCHEAT33441 Can Run This Command."
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['owner'])
 def show_owner(message):
-    response = "👑 Bot Owner: @BOOMBAMCHEAT3344"  # Replace with the actual owner username
+    response = "👑 Bot Owner: @BOOMBAMCHEAT33441"  # Replace with the actual owner username
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['add'])
@@ -186,7 +186,7 @@ def add_user(message):
                     user_access[user_to_add] = {"expiry_time": expiry_timestamp}
                     # Save user access data
                     save_user_access(user_access)
-                    response = f"User {user_to_add} approved for {time_value} {time_unit} by @BOOMBAMCHEAT3344.\n\n\n 🅑🅞🅣 🅛🅘🅝🅚: @BOOMBAMCHEAT_BOT"
+                    response = f"User {user_to_add} approved for {time_value} {time_unit} by @BOOMBAMCHEAT3344.\n\n\n 🅑🅞🅣 🅛🅘🅝🅚: @Shahdilkaddos_bot"
                 else:
                     response = "User already exists."
             except ValueError:
@@ -194,7 +194,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID followed by a positive integer with minute(s), hour(s), day(s), or month(s). \n\nExample Usage: /add 9999999999 3 hours('minutes', 'hours', 'days', or 'months')"
     else:
-        response = "Only @BOOMBAMCHEAT3344 can run this command."
+        response = "Only @BOOMBAMCHEAT33441 can run this command."
 
     bot.reply_to(message, response)
 
@@ -213,7 +213,7 @@ def show_recent_logs(message):
             response = "No data found "
             bot.reply_to(message, response)
     else:
-        response = "Only @BOOMBAMCHEAT3344 can run this command."
+        response = "Only @BOOMBAMCHEAT33441 can run this command."
         bot.reply_to(message, response)
 
 @bot.message_handler(commands=['remove'])
@@ -238,7 +238,7 @@ def remove_user(message):
         else:
             response = "Please specify a user ID to remove."
     else:
-        response = "Only @BOOMBAMCHEAT3344 can run this command."
+        response = "Only @BOOMBAMCHEAT33441 can run this command."
 
     bot.reply_to(message, response)
 
@@ -339,8 +339,8 @@ def welcome_start(message):
         f"🥀Welcome {user_name}!\n\n"
         " For User ID : /id \n\n"
         "👉 Join our official channel - https://t.me/BOOMBAMVHEAT3344 ✅\n\n"
-        "👑 For access: @BOOMBAMCHEAT3344"
-        "👑 OWNER : @BOOMBAMCHEAT3344"
+        "👑 For access: @BOOMBAMCHEAT33441"
+        "👑 OWNER : @BOOMBAMCHEAT33441"
     )
     bot.reply_to(message, response)
 
@@ -362,7 +362,7 @@ def show_access_expiry(message):
             "🚫 Unauthorized Access! 🚫\n\n"
             "Oops! It seems like you don't have permission to use the /plan command.\n"
             "To gain access and unleash the power of attacks,\n\n"
-            "👉 Contact an Admin or the Owner @Vaibhav_dhami for approval.\n"
+            "👉 Contact an Admin or the Owner @BOOMBAMCHEAT33441 for approval.\n"
             "🌟 Become a proud supporter and purchase approval.\n"
             "💬 Chat with an Owner @Vaibhav_dhami now and level up your capabilities!\n\n"
             "🚀 Ready to supercharge your experience? Take action and get ready for powerful attacks!"
@@ -392,7 +392,7 @@ def show_command_logs(message):
 
 @bot.message_handler(commands=['owner'])
 def show_owner(message):
-    response = "👑 Bot Owner: @BOOMBAMCHEAT3344"  # Replace with the actual owner username
+    response = "👑 Bot Owner: @BOOMBAMCHEAT33441"  # Replace with the actual owner username
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['admincmd'])
@@ -427,7 +427,7 @@ def clear_logs_handler(message):
         response = clear_logs()
         bot.reply_to(message, response)
     else:
-        bot.reply_to(message, "Only @BOOMBAMCHEAT3344 can run this command.")
+        bot.reply_to(message, "Only @BOOMBAMCHEAT33441 can run this command.")
 
 @bot.message_handler(commands=['mylogs'])
 def show_command_logs(message):
